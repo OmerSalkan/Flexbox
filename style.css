@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
+
+
+:root {
+    --bodyFont: 'Roboto', sans-serif;
+    --bodyColor: #777777;
+    --font: 19px;
+    --white: #fff;
+    --gray: #444;
+    --blue: #4f9ec5;
+    --lightgray: #eee;
+    --padding: 100px 0;
+    --transition: .3s ease;
+}
+
+/* basic style */
+button{
+    background: var(--blue);
+    border: none;
+    padding: 10px 30px;
+    font-size: .8rem;
+    text-transform: uppercase;
+    color: var(--white);
+    cursor: pointer;
+    border-radius: 20px 20px 20px 0;
+    margin-top: 30px;
+    transition: var(--transition);
+
+}
+button:hover{
+    background: var(--gray);
+    
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: var(--bodyFont);
+    font-size: var(--font);
+    color: var(--bodyColor);
+    font-weight: 300;
+    line-height: 1.8;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 300;
+}
+.container{
+    width: 80%;
+    margin: auto;
+}
+
+/* header */
+
+header{
+    background-image: linear-gradient(rgba(0,0,0, .3), rgba(255,255,255, .99)) ,url(imgflex/header.jpg);
+    height: 70vh;
+    background-position: center;
+    background-size: cover;
+    border-top: 10px solid var(--gray);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 6rem;
+    color: var(--white);
+    text-shadow: 2px 2px var(--gray);
+}
+
+header p {
+    font-size: 2rem;
+    color: var(--gray);
+}
+
+/* intro */
+.intro{
+    padding: var(--padding);
+    text-align: center;
+}
+.intro h2{
+    font-size: 3rem;
+    margin-bottom: 30px;
+}
+
+.intro .row:first-child::after,
+hr{
+    display: block;
+    content: "";
+    width: 30%;
+    height: 1px;
+    background: var(--lightgray);
+    margin: 40px auto;
+}
+.intro .row:nth-child(2){
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    flex-wrap: wrap;
+
+
+
+}
+
+.intro .row:last-child div{
+    flex: 0 0 30%;
+}
+
+.intro i{
+    color: var(--blue);
+    font-size: 3rem;
+    transition: var(--transition);
+}
+
+.intro h3{
+    font-size: 2rem;
+
+}
+
+.intro i:hover{
+    color: var(--gray);
+}
+
+/*blog*/
+
+.blog{
+    padding: var(--padding);
+    background: var(--lightgray);
+
+}
+
+.blog article{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.blog img{
+    width: 100%;
+    box-shadow: 4px 4px var(--blue);
+    border-radius: 50px 50px 50px 0;
+    transition: var(--transition);
+    
+}
+
+.blog div{
+    flex: 0 0 47%;
+}
+
+.blog img:hover{
+    width: 100%;
+    box-shadow: 4px 4px 8px var(--gray);
+    
+    
+}
+
+.blog h3{
+    font-size: 2rem;
+}
+
+.blog p{
+    text-align: justify;
+}
+
+/*footer*/
+
+footer{
+    text-align: center;
+    background: var(--gray);
+    color: var(--lightgray);
+    padding: var(--padding);
+    
+}
+
+footer a{
+    font-size: 2rem;
+    color: var(--blue);
+    margin: 10px;
+    transition: var(--transition);
+    
+}
+
+footer a:hover{
+    color: var(--bodyColor);
+}
+
+footer p{
+    font-weight: 100;
+
+}
+
+footer h2{
+    font-size: 2.5rem;
+}
+@media(min-width: 768px) and (max-width: 1024px){
+    .intro .row:last-child div,
+    .blog div {
+        flex: 0 0 100%;
+        margin-bottom: 30px;
+    }
+
+}
+
+
+@media(max-width: 767px){
+   .container{
+       width: 90%;
+   }
+    header h1 {
+        font-size: 4.5rem;
+        
+    }
+    header{
+        height: 50vh;
+    }
+
+    .intro h2 {
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+
+    .intro .row:last-child div,
+    .blog div {
+        flex: 0 0 100%;
+        margin-bottom: 30px;
+    }
+}
+
